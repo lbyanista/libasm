@@ -3,13 +3,14 @@
 
 size_t	ft_strlen(const char *s);
 char	*ft_strcpy(char *dst, const char *src);
+int		ft_strcmp(const char *s1, const char *s2);
 
 int main()
 {
 	// int c = ft_strlen("Pepepopo");
-	char *dst,*src;
-	src = "holaco";
-	char *str = ft_strcpy(dst, src);
-	printf("%s\n", str);
+	const char *s1,*s2;
+	s1 = "holaco";
+	int ret = strcmp(s1, s2);
+	printf("%d\n", ret);
 	return (0);
 }
