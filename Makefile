@@ -6,12 +6,12 @@
 #    By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 14:58:53 by mlabrayj          #+#    #+#              #
-#    Updated: 2021/02/01 10:38:21 by mlabrayj         ###   ########.fr        #
+#    Updated: 2021/02/01 11:38:17 by mlabrayj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ASM = nasm -f macho64
-SRC = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s
+SRC = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
 O = $(SRC:.s=.o)
 NAME = libasm.a
 
@@ -27,7 +27,7 @@ clean:
 		rm -f $(O)
 
 fclean: clean
-		rm -f $(NAME)
+		rm -f $(NAME) a.out
 
 re: fclean all
 
