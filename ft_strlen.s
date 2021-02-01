@@ -1,12 +1,12 @@
 section .text
-    global _ft_strlen   ; must be declared for using gcc
+    global _ft_strlen
 
 _ft_strlen:
-	mov	rax, 0
+	mov	rax, -1
 
 _loop:
-	mov	cl, byte [rdi + rax]; check first byte
-	inc rax					; increment rax i++
-	cmp cl, 0				; compart 
-	jne _loop 				; If jump is not zero go back to _loop
-	ret						; return rax (i)
+	inc rax
+	mov	cl, byte [rdi + rax]
+	cmp cl, 0
+	jne _loop
+	ret
